@@ -1,0 +1,44 @@
+#side-video-box {
+    background: #222;
+    min-height: 100vh;
+}
+.side-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.side-video .side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.side-video #side-right {
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+.side-video #side-left {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+.side-video .side video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.side-video .content {
+    color: #fff;
+    padding: 12%;
+}
+/* .side-video .content h2 {
+    font-size: 350%;
+} */
+.side-video .content p {
+    font-size: 250%;
+    line-height: 150%;
+}

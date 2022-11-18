@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>银河无限，星纵澜流</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/video-box.css">
+    <link rel="stylesheet" href="./css/side-video.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <style scoped>
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            width: 10%;
+            height: 8vh;
+            border-radius: 24px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background: #333;
+            font-size: 120%;
+            color: #fff;
+            text-shadow: 1px 1px 2px black;
+        }
+        button:hover {
+            transform: scaleX(1.4);
+            transition: .8s;
+            color: #03e9f4;
+        }
+    </style>
+</head>
+<body>
+    <section style="margin: 0; background: #222;">
+        <div id="video-box">
+            <div class="shell" style="height: 80vh;">
+                <video src="./video/1.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 140vh;">
+                <video src="./video/1.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="./video/3.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 130vh;">
+                <video src="./video/8.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 110vh;">
+                <video src="./video/14.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 80vh;">
+                <video src="./video/7.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="./video/8.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="video/3.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="./video/2.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="./video/9.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="./video/10.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="video/1.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="./video/14.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="./video/22.mp4" type="video/mp4" loop muted></video>
+            </div>
+            
+            <div class="shell" style="height: 80vh;">
+                <video src="./video/16.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 140vh;">
+                <video src="./video/17.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="./video/18.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 130vh;">
+                <video src="./video/19.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 110vh;">
+                <video src="./video/20.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 80vh;">
+                <video src="./video/21.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="./video/15.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="./video/14.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="video/23.mp4" type="video/mp4" loop muted></video>
+            </div>
+            <div class="shell" style="height: 100vh;">
+                <video src="video/19.mp4" type="video/mp4" loop muted></video>
+            </div>
+        </div>
+    
+        <div id="side-video-box">
+            <div class="side-video">
+                <div class="side" id="side-right">
+                    <video src="./video/1.mp4" type="video/mp4" autoplay loop muted></video>
+                </div>
+                <div class="side" id="side-left">
+                    <video src="./video/1.mp4" type="video/mp4" autoplay loop muted></video>
+                </div>
+                <div class="content">
+                    <p style="font-family: monospace;">
+                        <!-- 我们都是一百三十七亿年大爆炸时的万千星辰的散落，所以我们每个人都是星辰。 不妨温柔地活出热烈？让梦想宇航星澜 -->
+                        Do not feel lonely, the entire universe is inside of you
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer><button>返回</button></footer>
+    </section>
+</body>
+</html>
+<script src="./js/video-box.js"></script>
+<script src="./js/side-video.js"></script>
+<script>
+    $(function() {
+        $("button").on("click", function() {
+            window.location.href = "main.html";
+        })
+    })
+</script>
+<script>
+    $(function () {
+        setInterval(() => {
+            console.log(`${window.scrollY}`);
+        }, 100);
+    })
+</script>

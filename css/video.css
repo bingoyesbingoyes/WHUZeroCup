@@ -1,0 +1,7 @@
+video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  mix-blend-mode:darken;
+}/*# sourceMappingURL=video.css.map */

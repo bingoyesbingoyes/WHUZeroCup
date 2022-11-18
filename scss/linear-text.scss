@@ -1,0 +1,38 @@
+.linear-text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    p {
+        margin: 0 9em;
+        font-size: 2em;
+        font-weight: 700;
+    }
+    .linear-text {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 1.8em;
+        font-style: italic;
+        color: var(--color-linear-text);
+        /* 这句一定要加上，不然空格不认 */
+        white-space: pre;
+        // span {
+            
+        // }
+        @keyframes animateLinearText {
+            from {
+                opacity: 0;
+                transform: translateY(-20%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+@media screen and (max-width: 720px) {
+    #section-linear-text {
+        display: none;
+    }
+}

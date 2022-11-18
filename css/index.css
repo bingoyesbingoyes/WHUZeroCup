@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@font-face {
+  font-family: myKaiTi;
+  src: url("../css/江西拙楷2.0.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: sans-serif, "myKaiTi", "NSimSun";
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+section .shell {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .shell h2, section .shell .shell.shell-sky, section .shell .shell.shell-ground {
+  visibility: hidden;
+  color: #171717;
+  font-size: 6vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+section .shell h2 span:nth-child(2), section .shell .shell.shell-sky span:nth-child(2), section .shell .shell.shell-ground span:nth-child(2) {
+  line-height: 1.2em;
+  font-size: 1.3em;
+}
+section .shell.shell-ground {
+  background: #CFCFCF;
+}
+section .shell.shell-sky {
+  background: #171717;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+section .shell.shell-sky h2, section .shell.shell-sky .shell.shell-ground, section .shell.shell-sky .shell.shell-sky {
+  color: #fff;
+}
+@keyframes animateFly {
+  0% {
+    transform: translateY(60%);
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  70% {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-60%);
+    opacity: 0;
+  }
+}
+section img {
+  position: absolute;
+  cursor: pointer;
+  z-index: 999;
+}
+section #unfire-rocket {
+  top: 32vw;
+  left: 61vw;
+  width: 50vw;
+  height: 22vw;
+  visibility: visible;
+}
+section #fire-rocket {
+  top: 32vw;
+  left: 61vw;
+  width: 50vw;
+  height: 22vw;
+  visibility: hidden;
+}
+@keyframes animateRocket {
+  75% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(-300%);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=index.css.map */

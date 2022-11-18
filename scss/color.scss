@@ -1,0 +1,51 @@
+:root {
+    --color-header-background: linear-gradient(180deg, #333, transparent 70%);
+    // linear-gradient(180deg, #33c7f7, transparent 70%, #33c7f7);
+    --color-header-intro: rgba(255, 255, 255, .5);
+    --color-header-intro-sticky: #fff;//rgba(51, 199, 247, .4);
+    --color-header-li: #999;//rgba(105, 212, 237, .6);
+    --color-header-li-hover: #03e9f4;
+    --color-header-li-bg: #333;
+
+    --color-content: #bfc8d7;// #2f204d;
+    --color-content-hover: #fff;
+    --color-content-h1: #E8ECEC;//rgba(9, 32, 71, .9);
+    --color-card-h1: #E8ECEC;
+    --color-card-h2: #bfc8d7; // soft
+    --color-card-p: #edeef0;
+    --color-button: #6eceda;
+    --color-button-background: rgba(0, 100, 178, .3);
+    --color-button-hover: #03e9f4;
+    --color-button-background-hover: rgba(0, 100, 178, .7);
+
+    --color-linear-text:#E1FFFF;
+
+    --color-overlay-hover-one: #999;//#0aaff1;
+    --color-overlay-hover-two: #666;//#0584f2;
+    --color-overlay-hover-three: #333;//#0444bf;
+    --color-overlay-content: #ebf2ea;
+    --color-overlay-more: #E6FFE6;
+    --color-overlay-more-background: #909fa6;
+    --color-overlay-h2: #fff;//#a3586d;
+    --color-overlay-content-before: rgba(255, 255, 255, .1);
+
+    --color-scroll: linear-gradient(180deg, #333, #999);
+    --color-scroll-edge: linear-gradient(0, #008aff, #00ffe7);
+   
+    --color-comment-board: rgba(191,200,215, .6);
+    --color-comment-button: #002C7C;
+    --color-comment-button-background: rgba(191,200,215, .6);
+    --color-comment-button-border: #0064B2;
+    --color-comment-button-hover: #03e9f4;
+    --color-comment-button-background-hover: rgba(255, 255, 255, .8);
+    --color-comment-box-background: linear-gradient(135deg, transparent, #666);
+    --color-comment-box-h3: #E0E0E0;
+    --color-comment-box-borderTop: aqua;
+    --color-comment-box-span-borderBottom: skyblue;
+    --color-comment-box-span-name: #D1D1D1;
+    --color-comment-box-span-border: rgba(191,200,215, .4);
+    --color-comment-box-span-text: #FBFAFB;
+    --color-comment-box-span-hover: #03e9f4;
+    --color-comment-box-span-button-change: #4F486E;
+    --color-comment-box-span-button-del: #853442;
+}

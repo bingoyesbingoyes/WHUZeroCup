@@ -1,0 +1,47 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+// ::-webkit-scrollbar-track {
+//     box-shadow: inset 0 0 10px grey; 
+//     border-radius: 10px;
+// }
+.progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    // height: 100%;
+    // background: linear-gradient(0, #008aff, #00ffe7);
+    background: var(--color-scroll);
+    border-radius: 0 0 24px 24px;
+    // animation: animateScroll 8s linear infinite;
+    z-index: 9999;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: .3vw;
+        height: 100%;
+        background: var(--color-scroll-edge);
+        filter: blur(30px);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: .3vw;
+        height: 100%;
+        background: var(--color-scroll-edge);
+        filter: blur(10px);
+    }
+}
+@keyframes animateScroll {
+    0% {
+        filter: hue-rotate(0);
+    } 
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}

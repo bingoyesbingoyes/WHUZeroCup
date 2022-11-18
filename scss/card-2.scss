@@ -1,0 +1,153 @@
+.card-box-2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-bottom: 2%;
+	box-sizing: border-box;
+    .card-content-2 {
+        position: relative;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        .cards {
+            position: relative;
+            width: 27vw;
+            height: 36vw;
+            display: flex;
+            border-radius: 24px;
+            justify-content: center;
+            align-items: center;
+            overflow-y: scroll;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background-color: var(--color-overlay-content-before);
+                z-index: 99;
+                pointer-events: none;
+            }
+            .img-box {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                img {
+                    border-radius: 28px;
+                    width: 14vw;
+                    height: 16vw;;
+                    position: relative;
+                }
+                h2 {
+                    padding-top: 8vh;
+                    color: var(--color-overlay-h2);
+                    font-weight: 700;
+                    letter-spacing: .3em;
+                }
+            }
+            .overlay {
+                position: absolute;
+                bottom: 4vh;
+                right: 1.5vw;
+                width: 3.5vw;
+                height: 3.5vw;
+                background: var(--color-overlay-more-background);
+                box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+                cursor: pointer;
+                border-radius: 50%;
+                transition: .6s;
+                &::before {
+                    content: '更多';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    color: var(--color-overlay-more);
+                    font-size: 1vw;
+                    font-weight: 500;
+                    letter-spacing: .15vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition-delay: .4s;
+                }
+                &:hover {
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: none;
+                    opacity: .9;
+                    border-radius: 24px;
+                    &::before {
+                        display: none;
+                        transition-delay: 0;
+                    }
+                    & ~ .content {
+                        opacity: 1;
+                        visibility: visible;
+                        transition-delay: .4s;
+                    }
+                }
+            }
+            .content {
+                padding: 2vw;
+                z-index: 1;
+                pointer-events: none;
+                opacity: 0;
+                visibility: hidden;
+                color: var(--color-overlay-content);
+                transition: 0;
+                h2 {
+                    text-align: center;
+                    font-size: 2vw;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .cards:nth-child(1),
+    .cards:nth-child(1) .overlay:hover {
+        background: var(--color-overlay-hover-one);
+    }
+    .cards:nth-child(2),
+    .cards:nth-child(2) .overlay:hover {
+        background: var(--color-overlay-hover-two);
+    }
+    .cards:nth-child(3),
+    .cards:nth-child(3) .overlay:hover {
+        background: var(--color-overlay-hover-three);
+    }
+    #left-card {
+        position: relative;
+        left: 20%;
+    }
+    #right-card {
+        position: relative;
+        right: 20%;
+    }
+}
+@media screen and (max-width: 720px) {
+    .card-box-2 {
+        position: relative;
+        .card-content-2 {
+            .cards:hover {
+                transform: scale(2) skewX(4deg);
+                transition: 1s;
+                z-index: 99;
+            }
+            .content {
+                font-size: .5em;
+                transform: translateX(4.8vw);
+            }
+        }
+    }
+}

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>太空之眼</title>
+    <!-- 引入fontawesome图标库 -->
+    <link href=".\fa\css\all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css//linear-text.css">
+    <link rel="stylesheet" href="./css/card-2.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/scroll.css">
+    <link rel="stylesheet" href="./css/video.css">
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./css/star.css">
+    <link rel="stylesheet" href="./css/film.css">
+    <!-- 引入jq -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/vue3.js"></script>
+</head>
+<body>
+    <!-- 滚动自动播放音乐 -->
+    <!-- <video src="./audio/奔向恒星的海洋.flac" autoplay="autoplay" controls="controls" preload loop="loop" hidden="true"></video> -->
+    <!-- 固定背景播放视频 -->
+    <video autoplay muted loop id="bg-video-1" style="filter:grayscale(.55)">
+        <source src="./video/2.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop id="bg-video-2">
+        <source src="./video/6.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop id="bg-video-3" style="filter:grayscale()">
+        <source src="./video/1.mp4" type="video/mp4">
+    </video>
+    <!-- scrollbar部分 -->
+    <div>
+        <div class="progressbar"></div>
+    </div> 
+
+    <!-- header部分 -->
+    <header>
+        <h2 class="header-intro">AEROSPACE</h2>
+        <div class="banner">
+            <div class="blocks"></div>
+        </div>
+        <nav>
+            <ul>
+                <!-- 索引部分 -->
+                <li><a href="#pos-one" id="index-one">嫦娥</a></li>
+                <li><a href="#pos-two" id="index-two">天问</a></li>
+                <li><a href="#pos-three" id="index-three">神舟</a></li>
+                <li><a href="#pos-four" id="index-four">北斗</a></li>
+                <!-- 人物 -->
+                <li><a href="#people" id="index-five">人物</a></li>
+                <li><a href="#film" id="index-six">征程</a></li>
+                <!-- 通向底部的索引 -->
+                <li><a href="#bottom" id="intro-author">留言板 / 关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <!-- 卡片式布局用来介绍航天历史成果 -->
+    <!-- 并使用便捷创新的轮播图效果 -->
+    <!-- 一共 5 + 4 + 9 + 3 = 21 张卡牌 -->
+        <section class="card-box" id="pos-one">
+            <!-- 主文本 -->
+            <div class="content">
+                <img src="./img/3.jpg">
+                <h1>嫦娥探月</h1>
+                <p>
+                    &emsp;李白骑鲸下蓬岛，嫦娥洗月来沧溟。常常怀想，古人是对于皓月有怎样的向往，才会独步行吟,桂子芗霏羽衣湿，飞仙挟我凌太清。
+                    <br>&emsp;又是寄托了怎般的相思，才会叹殇咏怀，白兔捣药秋复春，嫦娥孤栖与谁邻。
+                    <br>&emsp;多应是嫦娥，恨掩重帏，晚妆慵理。也许，月亮不属于王公贵族，不属于文人墨客，月亮不属于任何一个人，但总有某个时刻，她照亮了我们。
+                    <br>&emsp;&emsp;中有月轮满，皎洁如圆圭。嫦娥之意象虽飘摇，若霓裳羽衣般虚幻，然呼唤嫦娥的诗人，却是一片真心。或许，奔向沧月的不是嫦娥，而是古人浪漫绮想向着无尽星穹的延伸，
+                    怀着美好的愿景于樊笼嚣尘之重负下轻盈，不断上升，直到奔向无垠的月影。
+                    <br>&emsp;&emsp;理想与诗，浪漫与梦，忆往昔，古人的思绪御夜风而行星澜；看今朝，民族的探月梦领时代而引风骚。嫦娥在月宫降落，而五千年的理想升起。
+                </p>
+            </div>
+
+            <div class="shell">
+                <!-- 轮播图按钮  -->
+                <div class="button-slideshow" id="button-one">
+                    <div class="button-left"> &lt; </div>
+                    <div class="button-right"> &gt; </div>
+                </div>
+                <!-- 卡片集 -->
+                <div class="card-slideshow" id="card-one">
+                    <!-- 单张卡片 -->
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/7.jpg">
+                        </div>
+                        <h1>嫦娥五号</h1>
+                        <h2>2020年11月24日</h2>
+                        <p>
+                            长征五号遥五运载火箭搭载嫦娥五号探测器成功发射升空，标志着中国“探月工程”第三步拉开序幕。嫦娥五号任务是“探月工程”的第六次任务，也是中国航天迄今为止最复杂、难度最大的任务之一，实现了中国首次月球无人采样返回，助力深化月球成因和演化历史等科学研究
+                        </p>
+                    </span>
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/2.jpg">
+                        </div>
+                        <h1>嫦娥四号</h1>
+                        <h2>2018年12月8日</h2>
+                        <p>
+                            “鹊桥”中继星于2018年5月21日成功发射，随后进入地月拉格朗日L2点使命轨道，成为世界上首颗运行于地月拉格朗日L2点的通信卫星，承担着嫦娥四号着陆器和巡视器与地球间的通信和数传任务。嫦娥四号探测器于2018年12月8日成功发射，于2019年1月3日成功软着陆在月球背面的南极-艾特肯盆地冯卡门撞击坑，并通过“鹊桥”中继星传回了世界第一张近距离拍摄的月背影像图，揭开了古老月背的神秘面纱。随后，月球车“玉兔2号”开始进行巡视探测
+                        </p>
+                    </span>
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/8.jpg">
+                        </div>
+                        <h1>嫦娥三号</h1>
+                        <h2>2013年12月2日</h2>
+                        <p>
+                            2013年12月15日，我国首辆月球车“玉兔号”顺利抵达月球表面，实现月面软着陆，首次实现了中国地外天体软着陆和巡视探测，是中国航天领域技术最复杂、实施难度最大的空间活动之一使中国成为世界上第三个成功实现月面巡视探测的国家
+                        </p>
+                    </span>
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/4.jpg">
+                        </div>
+                        <h1>嫦娥二号</h1>
+                        <h2>2010年10月1日</h2>
+                        <p>
+                            探月工程二期的先导星，用于验证探月二期关键技术，并对嫦娥三号预选的着陆区域进行详细探测。随后与图塔蒂斯小行星交会，并对小行星进行了光学成像，这是国际上首次实现对该小行星近距离探测。嫦娥二号任务的圆满成功，标志着中国在深空探测领域突破并掌握了一大批新的具有自主知识产权的核心技术和关键技术，为后续实施探月二期工程的“落”和“回”以及下一步开展火星等深空探测奠定了坚实技术基础，中国从航天大国迈向航天强国的进程又跨出了重要的一步
+                        </p>
+                    </span>
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/3.jpg">
+                        </div>
+                        <h1>嫦娥一号</h1>
+                        <h2>2007年10月24日</h2>
+                        <p>
+                            我国的第一颗绕月卫星命名为“嫦娥一号”，源自于嫦娥奔月的美丽传说，体现了奔月的主题，弘扬了历史传承。嫦娥一号卫星首次绕月探测的成功，树立了中国航天的第三个里程碑，突破了一大批具有自主知识产权的核心技术和关键技术，标志着我国成为世界上第5个自主发射月球探测器的国家
+                        </p>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <div class="card-box" id="pos-two">
+            <div class="shell">
+                <div class="button-slideshow" id="button-two">
+                    <div class="button-left"> &lt; </div>
+                    <div class="button-right"> &gt; </div>
+                </div>
+
+                <div class="card-slideshow" id="card-two">
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/6.jpg">
+                        </div>
+                        <h1>祝融号</h1>
+                        <h2>2021年5月15日</h2>
+                        <p>
+                            国家航天局消息，科研团队根据“祝融号”火星车发回遥测信号确认，天问一号着陆巡视器成功着陆于火星乌托邦平原南部预选着陆区，我国首次火星探测任务着陆火星取得圆满成功
+                        </p>
+                    </span>
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/7.jpg">
+                        </div>
+                        <h1>天问一号</h1>
+                        <h2>2020年7月23日</h2>
+                        <p>
+                            中国在海南岛东北海岸中国文昌航天发射场，用长征五号遥四运载火箭将我国首次火星探测任务“天问一号”探测器发射升空，飞行2000多秒后，成功将探测器送入预定轨道，开启火星探测之旅，迈出了中国自主开展行星探测的第一步
+                        </p>
+                    </span>
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/12-1.jpg">
+                        </div>
+                        <h1>水手4号</h1>
+                        <h2>1964年 美国</h2>
+                        <p>
+                            1964年，美国成功发射水手4号火星探测器，它是历史上第一个成功到达火星的探测器。随后美、苏、欧、日等国相继发射了数十个火星探测器。
+                        </p>
+                    </span>
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/19.jpg">
+                        </div>
+                        <h1>火星1号</h1>
+                        <h2>1962年 前苏联</h2>
+                        <p>
+                            1962年，前苏联发射火星1号探测器，在飞离地球1亿公里时与地面失去联系，从此下落不明，然而，它却成为了人类火星探测的开端
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <!-- adjust tool类是为了方便地修改卡片左右布局不同的问题 -->
+            <div class="content adjust-tool">
+                <img src="./img/19.jpg">
+                <h1>天问九天</h1>
+                <p>
+                    伯强何处？惠气安在？<br>何阖而晦？何开而明？<br>九天之际，安放安属？<br>屈原放逐，徬徨山泽，向天发问，向心求答。把酒欲从天问月，知时谁解管飞葭。古人生不逢时之际，
+                    为何常畅怀天问？大概是，每当人仰望天空，浩瀚无垠的极目旷远，总会令人思绪万千。问天，也是问心，问天际苍茫，问自在何方，一樽菖酒一烛微，却是一人一生。掩烛续天问，鸿雁杳无一。
+                    个人求问，民族求问，何以为答，何以作答？唯有躬自踔厉，和光同尘，与时携行。以亮剑天地，以顾探民魂。背铸篆籀人不识，持向九天问苍颉。试向青天问一声，此身是否谪长庚
+                </p>
+            </div>
+        </div>
+        <div class="card-box" id="pos-three">
+            <div class="content">
+                <img src="./img/18.jpg">
+                <h1>神舟逐梦</h1>
+                <p>
+                    &emsp;&emsp;玉兔为尔停月臼，飞鱼为尔跃神舟。巍巍西北昆仑冈，其下郁郁盘敦煌。于戈壁黄土，神舟飞升，拈银棹，荡星浩。舟以何谓，人卧其间自安然，星河为伴，岂不绝美？
+                    就这样撑一支青翰棹舣，向着无尽的星辰大海远航，迷失在银河的未知港湾。然而，太空的旅客，从不孤独，有一整个华邦的赤子为之祈祷。
+                    <br>
+                    &emsp;&emsp;不禁想起《银翼杀手》的经典台词，“我所见过的事物，你们人类绝对无法置信，我目睹了战舰在猎户星座的端沿起火燃烧，我看着C射线在唐怀瑟之门附近的黑暗中闪耀，所有这些时刻，终将随时间消逝，一如眼泪消失在雨中……”
+                    <br>
+                    &emsp;&emsp;星空之上的水手，会望着蓝色故乡流泪吗？会见证怎样的风景呢？
+                    <br>
+                    &emsp;&emsp;于神舟上，于前进中。
+                </p>
+            </div>
+
+            <div class="shell">
+                <div class="button-slideshow" id="button-three">
+                    <div class="button-left"> &lt; </div>
+                    <div class="button-right"> &gt; </div>
+                </div>
+
+                <div class="card-slideshow" id="card-three">
+                    <!-- 卡片九 -->
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/10.jpg">
+                        </div>
+                        <h1>神舟十四号</h1>
+                        <h2>2022年6月5日</h2>
+                        <p>长征二号F遥十四运载火箭在酒泉卫星发射中心点火起飞，托举载有陈冬、刘洋、蔡旭哲3名航天员的神舟十四号载人飞船进入太空。约577秒后，神舟十四号载人飞船与火箭成功分离，进入预定轨道。飞行乘组状态良好，发射取得圆满成功。
+                            神舟十四号载人飞行任务是中国空间站建造阶段第二次飞行任务，也是该阶段首次载人飞行任务，航天员乘组在轨工作生活6个月，任务主要目的为：配合问天实验舱、梦天实验舱与核心舱的交会对接和转位，完成中国空间站在轨组装建造；
+                            完成空间站舱内外设备及空间应用任务相关设施设备的安装和调试；开展空间科学实验与技术试验；进行日常维护维修等相关工作
+                        </p>
+                    </span>
+                    <!-- 卡片八 -->
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/9.jpg">
+                        </div>
+                        <h1>神舟十三号</h1>
+                        <h2>2021年10月16日</h2>
+                        <p>航天员：翟志刚、王亚平、叶光富
+                            神舟十三号载人飞船采用自主快速交会对接的方式，首次径向停靠空间站；航天员首次在轨驻留6个月，这也是空间站运营期间航天员乘
+                            组常态化驻留周期；中国女航天员首次进驻中国空间站；在神舟十二号任务的基础上，进一步开展更多的空间科学实验与技术试验，产出高水平科学成果；
+                        </p>
+                    </span>
+                    <!-- 卡片七 -->
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/12-1.jpg">
+                        </div>
+                        <h1>神舟十二号</h1>
+                        <h2>2021年6月17日</h2>
+                        <p>航天员：聂海胜、刘伯明、汤洪波
+                            神舟十二号载人飞船入轨后顺利完成入轨状态设置，采用自主快速交会对接模式成功对接于天和核心舱前向端口，
+                            与此前已对接的天舟二号货运飞船一起构成三舱（船）组合体，整个交会对接过程历时约6.5小时。这是天和核心舱发射入轨后，
+                            首次与载人飞船进行的交会对接。3名航天员随后从神舟十二号载人飞船进入天和核心舱。
+                        </p>
+                    </span>
+                    <!-- 卡片六 -->
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/13.jpg">
+                        </div>
+                        <h1>神舟十号</h1>
+                        <h2>2013年06月11日</h2>
+                        <p>航天员：聂海胜、张晓光、王亚平（女）
+                            中国的第十艘太空飞船，也是中国第五艘载人飞船，首次开展我国航天员太空授课活动，与天宫一号进行交会对接成功，
+                            标志着中国已经基本掌握了空间飞行器交会对接技术。将对后续的天宫二号即第二代空间实验室的建设打下坚实的基础。
+                        </p>
+                    </span>
+                    <!-- 卡片五 -->
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/14.jpg">
+                        </div>
+                        <h1>神舟九号</h1>
+                        <h2>2012年06月16日</h2>
+                        <p>神舟九号载人飞船与天宫一号目标飞行器交会对接，是中国首次载人交会对接试验；首次验证了手控交会对接技术，航天员刘旺打出了漂亮的太空“十环”，进一步验证了自动交会对接技术
+                            神九任务的飞行乘组特点是“新老搭配、男女配合”。一是作为航天员景海鹏是第二次参加飞行任务；二是刘洋成为中国首位参加载人航天飞行的女航天员，同时她也是中国第二批航天员中首个参加飞行任务的。
+                            据了解，迄今为止，世界上已经有7个国家共50余名女航天员进行过太空飞行，相比于男性，女航天员上天要克服更多的困难，但也有自己独特的优势和意义。
+
+                        </p>
+                    </span>
+                    <!-- 卡片四 -->
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/15.jpg">
+                        </div>
+                        <h1>神舟八号</h1>
+                        <h2>2011年11月01日</h2>
+                        <p>神舟八号是神舟飞船的正式定型型号 。神八的成功发射并与天宫一号实现对接，使中国成为继美国、俄罗斯之后世界上第三个自主掌握空间交会对接技术的国家，
+                            标志着中国已经初步掌握自动空间交会对接技术，拥有建设简易空间实验室，即短期无人照料的空间站的能力
+                        </p>
+                    </span>
+                    <!-- 卡片三 -->
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/16.jpg">
+                        </div>
+                        <h1>神舟七号</h1>
+                        <h2>2008年09月25日</h2>
+                        <p>神舟七号载人飞船飞行任务的主要目的是实施中国航天员首次空间出舱活动，突破和掌握出舱活动相关技术，同时开展卫星伴飞、卫星数据中继等空间科学和技术试验。
+                            飞船运行期间，1名航天员着中国的飞天舱外航天服出舱进行舱外活动，回收在舱外装载的试验样品装置。
+                        </p>
+                    </span>
+                    <!-- 卡片二 -->
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/17.jpg">
+                        </div>
+                        <h1>神舟五号</h1>
+                        <h2>2003年10月15日</h2>
+                        <p>神舟五号飞船是中国第一艘载人航天飞船，是神舟飞船的发展改进型号。从1999年到2003年，中国先后成功地发射了四艘无人飞船和一艘载人飞船，
+                            突破了载人飞船再入升力控制、应急救生、软着陆、GNC故障诊断、舱段间分离、防热等13项关键技术。作为中国高技术领域的跨世纪工程，神舟飞船总体性能优越，
+                            达到了20世纪90年代国际先进水平。
+                            神舟五号飞船发射圆满成功、返回准确着陆，实际着陆点与理论着陆点相差4.8公里。返回舱完好无损。航天英雄杨利伟自主出舱。中国首次载人航天飞行圆满成功。
+                            从此，中国成为世界上第三个独立掌握载人航天飞行技术的国家。
+                        </p>
+                    </span>
+                    <!-- 卡片一 -->
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/18.jpg">
+                        </div>
+                        <h1>神舟一号</h1>
+                        <h2>1999年11月20日</h2>
+                        <p>首次采用了在技术厂房对飞船、火箭联合体垂直总装与测试，整体垂直运输至发射场，并进行远距离测试发射控制的新模式。
+                            中国在原有航天测控网的基础上新建的符合国际标准体制的陆海基航天测控网，也在这次发射试验中首次投入使用。
+                            飞船在轨运行期间，地面测控系统和分布于公海的4艘“远望号”测量船对其进行了跟踪与测控，成功进行了一系列科学试验。
+                            中国实施载人航天工程的第一次飞行试验，标志着中国航天事业迈出了重要步伐，对突破载人航天技术具有重要意义 ，是中国航天史上的重要里程碑。
+                        </p>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="card-box" id="pos-four">
+            <div class="shell">
+                <div class="button-slideshow" id="button-four">
+                    <div class="button-left"> &lt; </div>
+                    <div class="button-right"> &gt; </div>
+                </div>
+
+                <div class="card-slideshow" id="card-four">
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/21.jpg">
+                        </div>
+                        <h1>北斗三号</h1>
+                        <h2>2009年</h2>
+                        <p>
+                            2009年，启动北斗三号系统建设；2018年年底，完成19颗卫星发射组网，完成基本系统建设，向全球提供服务；计划2020年年底前，完成30颗卫星发射组网，全面建成北斗三号系统。北斗三号系统继承北斗有源服务和无源服务两种技术体制，能够为全球用户提供基本导航（定位、测速、授时）、全球短报文通信、国际搜救服务，中国及周边地区用户还可享有区域短报文通信、星基增强、精密单点定位等服务
+                        </p>
+                    </span>
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/19.jpg">
+                        </div>
+                        <h1>北斗二号</h1>
+                        <h2>2004年</h2>
+                        <p>
+                            2004年，启动北斗二号系统工程建设；2012年年底，完成14颗卫星（5颗地球静止轨道卫星、5颗倾斜地球同步轨道卫星和4颗中圆地球轨道卫星）发射组网。北斗二号系统在兼容北斗一号系统技术体制基础上，增加无源定位体制，为亚太地区用户提供定位、测速、授时和短报文通信服务
+                        </p>
+                    </span>
+                    <span class="card">
+                        <div class="image">
+                            <img src="./img/5.jpg">
+                        </div>
+                        <h1>北斗一号</h1>
+                        <h2>1994年</h2>
+                        <p>
+                            1994年，启动北斗一号系统工程建设；2000年，发射2颗地球静止轨道卫星，建成系统并投入使用，采用有源定位体制，为中国用户提供定位、授时、广域差分和短报文通信服务；2003年发射第3颗地球静止轨道卫星，进一步增强系统性能
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class="content adjust-tool">
+                <img src="./img/5.jpg">
+                <h1>北斗环宇</h1>
+                <p>
+                    月没参横，北斗阑干。夜揽群星，明洁的北极星向着天枢的方向。御史秋风劲，尚书北斗尊。清浅望河汉，低昂看北斗。北斗不酌酒，南箕空簸扬。北斗酌美酒，劝龙各一觞。
+                    乃瞻寰宇，星河无界。环宇天穹，而导引地面迷途者的方向。君不见，天有七星，如棁如歌。而今，第八颗星已就位。只要民族的路依然坚定，北斗发动机的炽火就不会燃尽。只要不断走下去，
+                    道路就会不断延伸。七星临耀，于星云之中绽放，亦如黎明中的花朵。
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- 卡片布局，用来补充介绍第一次为保证简约未涉及的人物部分 -->
+        <section class="card-box-2" id="people">
+            <div class="card-content-2">
+                <div class="cards">
+                    <div class="img-box">
+                        <div>
+                            <img src="./img/杨利伟.jpg" style="filter:grayscale(30%)">
+                            <h2>杨利伟</h2>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h2>载人航天副总设计师</h2>
+                        <p>&emsp;&emsp;中国培养的第一代航天员，是中国进入太空的第一人。2003年10月15日北京时间9时，杨利伟乘由长征二号F火箭运载的神舟五号飞船首次进入太空，象征着中国太空事业向前迈进一大步，起到了里程碑的作用。
+                        </p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="img-box">
+                        <div>
+                            <img src="./img/聂海胜.jpg" style="filter:grayscale(30%)">
+                            <h2>聂海胜</h2>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h2>航天员大队大队长</h2>
+                        <p>&emsp;&emsp;2005年10月，他与费俊龙执行神舟六号载人飞行任务，获得圆满成功。
+                            2013年6月23日，在聂海胜的精准操控和张晓光、王亚平的密切配合下，天宫一号目标飞行器与神舟十号飞船成功实现手控交会对接。聂海胜成为继刘旺之后，第二个手动驾驶神舟飞船的中国人。2021年6月17日，航天员聂海胜进入天和核心舱，标志着中国人首次进入自己的空间站。
+                        </p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="img-box">
+                        <div>
+                            <img src="./img/翟志刚.png" style="filter:grayscale(30%)">
+                            <h2>翟志刚</h2>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h2>中国太空漫步第一人</h2>
+                        <p>&emsp;&emsp;2008年9月27日，翟志刚穿着中国研制的"飞天"舱外航天服，圆满完成中国首次空间出舱任务。成为第一位出舱活动的中国人，中国从此成为世界上第三个独立掌握空间出舱技术的国家。2022年1月，神舟十三号乘组进入空间站已超3个月，加上此前的神舟七号任务，翟志刚累计在轨工作已达100天，成为继聂海胜、王亚平之后第三位在轨100天的中国航天员。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="card-box-2">
+            <div class="card-content-2">
+                <div class="cards" id="left-card">
+                    <div class="img-box">
+                        <div>
+                            <img src="./img/景海鹏.jpg">
+                            <h2>景海鹏</h2>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h2>特级航天员</h2>
+                        <p>&emsp;&emsp;2008年执行神舟七号载人飞行任务，实现中国人首次太空行走。2012年执行载人飞行任务并担任指令长，圆满完成天宫一号与神舟九号载人交会对接任务。2016年担任指令长，执行天宫二号与神舟十一号载人飞行任务，圆满完成与天宫二号空间实验室交会对接，开展一批体现国际科学前沿和高新技术发展方向的空间科学与应用任务，首次实现我国航天员中期在轨驻留，成就了三巡苍穹的中国奇迹。
+                        </p>
+                    </div>
+                </div>
+                <div class="cards" id="right-card">
+                    <div class="img-box">
+                        <div>
+                            <img src="./img/刘伯明.jpg">
+                            <h2>刘伯明</h2>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h2>特级航天员</h2>
+                        <p>&emsp;&emsp;2008年9月，执行神舟七号飞行任务，在轨道舱协助翟志刚出舱行走。2021年6月17日9时，神舟十二号载人飞船与火箭成功分离，进入预定轨道，顺利将聂海胜、刘伯明、汤洪波3名航天员送入太空。当日18时48分，航天员聂海胜、刘伯明、汤洪波先后进入天和核心舱，标志着中国人首次进入自己的空间站。7月4日，航天员刘伯明出舱。
+                            8月20日，航天员刘伯明第二次出舱活动取得圆满成功。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-box-2">
+            <div class="card-content-2">
+                <div class="cards">
+                    <div class="img-box">
+                        <div>
+                            <img src="./img/刘洋.jpg">
+                            <h2>刘洋</h2>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h2>中国首位女航天员</h2>
+                        <p>&emsp;&emsp;2012年6月，执行神舟九号载人飞行任务，成为中国首位参加载人航天飞行的女航天员。
+                            2022年6月5日，搭载神舟十四号载人飞船的长征二号F遥十四运载火箭发射成功。当日20时50分，航天员陈冬、刘洋、蔡旭哲依次全部进入天和核心舱。
+                            9月1日，航天员陈冬开启问天实验舱气闸舱出舱舱门，航天员陈冬、刘洋成功出舱。这是我国航天员首次从问天实验舱气闸舱出舱实施舱外活动，也是刘洋首次执行出舱活动任务。</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="img-box">
+                        <div>
+                            <img src="./img/王亚平.png">
+                            <h2>王亚平</h2>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h2>英雄航天员</h2>
+                        <p>&emsp;&emsp;2013年6月执行神舟十号任务，历时15天，成为我国首位太空教师。2021年10月-2022年4月，执行神舟十三号任务，历时183天，成为我国首位太空漫步的女航天员、我国第一个进驻中国空间站的女航天员、首位两次飞天的中国女航天员、迄今为止在太空驻留时间最长的中国航天员，共进行了三次太空授课。
+                        </p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="img-box">
+                        <div>
+                            <img src="./img/叶光富.png">
+                            <h2>叶光富</h2>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h2>航天员大队二级航天员</h2>
+                        <p>&emsp;&emsp;2021年10月16日，搭载神舟十三号载人飞船的长征二号F遥十三运载火箭发射成功。神舟十三号航天员乘组于2021年11月7日晚进行首次出舱活动，航天员翟志刚、王亚平着“飞天”舱外服将进行舱外作业，航天员叶光富在舱内配合支持。12月26日，神舟十三号航天员乘组叶光富进行第二次出舱活动。12月27日神舟十三号航天员乘组圆满完成第二次出舱全部既定任务，航天员翟志刚、航天员叶光富安全返回天和核心舱，出舱活动取得圆满成功。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="film">
+            <div class="left-part">
+                <p>繁星闪烁</p>
+                <p>深蓝的太空</p>
+                <p>缄默</p>
+                <p>却听见星辰对语</p>
+                <h2>永远有人凝望宇宙</h2>
+                <h2>宇宙永远有人凝望</h2>
+                <button id="open-button">开启视频</button>
+                <button id="more-button">更多视频</button>
+            </div>
+            <div class="right-part">
+                <video muted loop preload>
+                    <source src="./video/4.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- 生成少量有内涵的文字 -->
+        <section class="linear-text-box" id="section-linear-text">
+            <p class="linear-text" style="font-family: monospace; font-size:3em;">Once you make a decision,&emsp;the universe conspires to make it happen
+            </p>
+        </section>
+
+        <!-- footer -->
+        <footer id="bottom">
+            <!-- 设计来介绍我们团队，点击“关于我们”后显现 -->
+            <details>
+                <summary>关于我们</summary>
+                <div class="footer-card-content">
+                    <div class="footer-card">
+                        <div class="img-box" id="footer-card-2">
+                            <img src="./img/12.jpg">
+                        </div>
+                        <div class="details">
+                            <div class="content" id="team">
+                                <h2>明年做一队<br><span>邱涵 陈晋宇 邱煦雯</span></h2>
+                                <div class="social-icons">
+                                    <a href="#team">
+                                        <i class="fab fa-qq"></i>
+                                    </a>
+                                    <a href="#team">
+                                        <i class="fab fa-google"></i>
+                                    </a>
+                                    <a href="#team">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#team">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+            <!-- 留言板 -->
+            <div class="comment-board">
+                <input type="name" id="name" placeholder="您的称呼">
+                <textarea placeholder="请写下您的留言"></textarea>
+                <button class="comment-button">提交</button>
+                <div class="line-top"></div>
+                <div class="comment-box">
+                    <h3>留言板</h3>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <details>
+                <div class="linear-text-box" id="footer-linear-text">
+                    <p class="linear-text">By&emsp;&emsp;武汉大学计算机学院2022级&emsp;&emsp;&emsp; “明年做一队” </p>
+                </div>
+            </details>
+            <p id="last-sentense">谢谢！</p>
+        </footer>
+    </main>
+    <!-- <div class="starsBox"></div> -->
+</body>
+</html>
+<script src="./js/header.js"></script>
+<script src="./js/graph-fly.js"></script>
+<script src="./js//linear-text.js"></script>
+<script src="./js/intro-team.js"></script>
+<script src="./js/card-one.js"></script>
+<script src="./js/card-two.js"></script>
+<script src="./js/card-three.js"></script>
+<script src="./js/card-four.js"></script>
+<script src="./js/scroll.js"></script>
+<script src="./js/comment-board.js"></script>
+<script src="./js/music.js"></script>
+<script src="./js/contact.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/star.js"></script>
+<script src="./js/film.js"></script>
+<!-- 输出调试信息，调试高度 -->
+<script>
+    $(function () {
+        setInterval(() => {
+            // console.log(`${window.scrollY}`);
+            console.log(`${window.scrollY}`);
+        }, 100);
+    })
+</script>

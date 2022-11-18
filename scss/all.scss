@@ -1,0 +1,27 @@
+@font-face {
+	font-family: NotoSansTC;
+	src: url("../css/NotoSansTC-Regular.otf");
+}
+@font-face {
+	font-family: RunningHard;
+	src: url("../css/鸿雷行书简体.otf");
+}
+@font-face {
+	font-family: myKaiTi;
+	src: url("../css/江西拙楷2.0.ttf");
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+body {
+	min-height: 100vh;
+	// background: url(../img/intro.jpg) fixed;
+	background-size: cover;
+	font-family: sans-serif, "myKaiTi", "KaiTi", "NSimSun";
+}
+section {
+	margin-top: 50vh;
+}
